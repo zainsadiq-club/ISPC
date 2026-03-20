@@ -1,3 +1,6 @@
+
+Copy
+
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -182,16 +185,21 @@
 </head>
 <body>
   <div id="progress-bar"></div>
+ 
+  <!-- FIX 1: Typo "everone" → "everyone" -->
   <div class="announcement" id="announcement">
-  Eid Mubarak everone! 
+    Eid Mubarak everyone!
     <a href="#events">View all events</a>
     <button class="ann-close" onclick="document.getElementById('announcement').remove()">✕</button>
   </div>
+ 
   <div id="particles"></div>
   <div class="sidebar-overlay" id="sbOverlay" onclick="closeSb()"></div>
+ 
   <aside class="sidebar" id="sidebar">
     <div class="sb-head">
-      <span class="sb-title">Club Name</span>
+      <!-- FIX 2: Generic "Club Name" → "ISPC" -->
+      <span class="sb-title">ISPC</span>
       <button class="sb-close" onclick="closeSb()"><i class="fas fa-times"></i></button>
     </div>
     <div class="sb-body">
@@ -210,6 +218,7 @@
     </div>
     <div class="sb-foot">© Islamic Society of Placer County</div>
   </aside>
+ 
   <nav>
     <div class="nav-inner">
       <div class="nav-left">
@@ -231,6 +240,7 @@
       </div>
     </div>
   </nav>
+ 
   <div class="mobile-nav" id="mobileNav">
     <a href="#about" onclick="closeNav()">About</a>
     <a href="#goals" onclick="closeNav()">Our Goals</a>
@@ -240,15 +250,16 @@
     <a href="#faq" onclick="closeNav()">FAQ</a>
     <a href="#join" class="btn-join-nav" onclick="closeNav()">Join Us</a>
   </div>
+ 
   <section class="hero">
     <div style="max-width:720px;margin:0 auto;">
-      <div class="hero-badge reveal"><i class="fas fa-star"></i>Proud mousqe in Placer County</div>
-    
+      <!-- FIX 3: Typo "mousqe" → "mosque" -->
+      <div class="hero-badge reveal"><i class="fas fa-star"></i>Proud mosque in Placer County</div>
       <h1 class="hero-title">
         <span id="heroLine1"></span>
         <span class="accent typing" id="heroLine2"></span>
       </h1>
-      <p class="hero-sub reveal">A safe place made for muslims of all backgrounds. </p>
+      <p class="hero-sub reveal">A safe place made for Muslims of all backgrounds.</p>
       <div class="hero-btns reveal">
         <a href="#join"><button class="btn-primary">Join Now <i class="fas fa-arrow-right" style="margin-left:6px"></i></button></a>
         <a href="#about"><button class="btn-outline">Learn More</button></a>
@@ -256,6 +267,8 @@
     </div>
     <div class="scroll-hint"><span>Scroll</span><div class="mouse"></div></div>
   </section>
+ 
+  <!-- FIX 4: First "about" section keeps id="about" -->
   <section id="about" class="about-section section">
     <div class="container">
       <div class="about-grid">
@@ -274,7 +287,7 @@
       </div>
     </div>
   </section>
-
+ 
   <section id="goals" class="section">
     <div class="container">
       <div class="section-tag reveal">What We Stand For</div>
@@ -290,7 +303,9 @@
       </div>
     </div>
   </section>
-  <section id="about" class="about-section section">
+ 
+  <!-- FIX 5: Duplicate id="about" → id="projects"; FIX 6: Broken src="masjid.png".png" → src="masjid.png" -->
+  <section id="projects" class="about-section section">
     <div class="container">
       <div class="about-grid">
         <div>
@@ -298,100 +313,73 @@
           <h2 class="section-title reveal">Projects</h2>
           <p class="reveal" style="font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:16px">Our goal is to support and grow a strong, united community through meaningful projects and initiatives that benefit everyone. We rely on your generous donations to make this possible, as your support allows us to organize events, provide valuable programs, and create opportunities that bring people together. Guided by faith and a commitment to service, we strive to make a lasting impact by fostering generosity, strengthening connections, and uplifting those around us while contributing positively to the broader community. Every contribution, no matter the size, helps us continue this mission and expand the good we can do together.</p>
           <p class="reveal" style="font-size:15px;color:var(--text2);line-height:1.8"><a href="https://www.canva.com/design/DAHCqMr3P-Q/fOZbDBedYWU3vJvIku3oFQ/view?utm_content=DAHCqMr3P-Q&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0bfc043576">Click here</a></p>
-         
         </div>
-        <img src="masjid.png".png" alt="ISPC logo" width="500">
+        <img src="masjid.png" alt="ISPC masjid" width="500">
       </div>
     </div>
   </section>
-  <section id="about" class="about-section section">
+ 
+  <!-- FIX 7: Duplicate id="about" → id="sunday-school"; FIX 8: Broken src="School.png".png" → src="School.png" -->
+  <section id="sunday-school" class="about-section section">
     <div class="container">
       <div class="about-grid">
         <div>
           <div class="section-tag reveal">About Us</div>
           <h2 class="section-title reveal">Sunday School</h2>
           <p class="reveal" style="font-size:15px;color:var(--text2);line-height:1.8;margin-bottom:16px">Our Sunday School is dedicated to nurturing knowledge, character, and faith in a supportive and welcoming environment for students of all ages. Through engaging lessons, interactive activities, and meaningful discussions, we help students build a strong understanding of their beliefs while also developing values such as respect, kindness, and responsibility. Our teachers are committed to guiding each student with care and attention, encouraging both personal growth and a deeper connection to their community. We strive to create a space where learning is enjoyable, friendships are formed, and young hearts are inspired to grow in faith and purpose.</p>
-
-         
         </div>
-        <img src="School.png".png" alt="ISPC logo" width="500">
+        <img src="School.png" alt="Sunday school" width="500">
       </div>
     </div>
   </section>
-   <section id="faq" class="section" style="background:var(--bg2)">
+ 
+  <!-- FIX 9: Duplicate id="faq" for Iqama section → id="iqama" -->
+  <section id="iqama" class="section" style="background:var(--bg2)">
     <div class="container">
-      <div class="section-tag reveal">Got Questions?</div>
-      <h2 class="section-title reveal">Iqama timings</h2>
+      <div class="section-tag reveal">Prayer Times</div>
+      <h2 class="section-title reveal">Iqama Timings</h2>
       <div class="faq-list">
         <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">Fajr <span class="faq-icon"><i class="fas fa-plus"></i></span></button><div class="faq-a">6:30</div></div>
-        <div class="faq-item reveal d1"><button class="faq-q" onclick="toggleFaq(this)">Duhr <span class="faq-icon"><i class="fas fa-plus"></i></span></button><div class="faq-a">1:30</div></div>
-<div class="faq-item reveal d1"><button class="faq-q" onclick="toggleFaq(this)">Asr <span class="faq-icon"><i class="fas fa-plus"></i></span></button><div class="faq-a">5:45</div></div>
-
-        <div class="faq-item reveal d3"><button class="faq-q" onclick="toggleFaq(this)">Magrib<span class="faq-icon"><i class="fas fa-plus"></i></span></button><div class="faq-a">7:21</div></div>
-            <div class="faq-item reveal d3"><button class="faq-q" onclick="toggleFaq(this)">Isha<span class="faq-icon"><i class="fas fa-plus"></i></span></button><div class="faq-a">9:00</div></div>
-    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">Jummah <span class="faq-icon"><i class="fas fa-plus"></i></span></button><div class="faq-a">1:30</div></div>
+        <div class="faq-item reveal d1"><button class="faq-q" onclick="toggleFaq(this)">Dhuhr <span class="faq-icon"><i class="fas fa-plus"></i></span></button><div class="faq-a">1:30</div></div>
+        <div class="faq-item reveal d2"><button class="faq-q" onclick="toggleFaq(this)">Asr <span class="faq-icon"><i class="fas fa-plus"></i></span></button><div class="faq-a">5:45</div></div>
+        <div class="faq-item reveal d3"><button class="faq-q" onclick="toggleFaq(this)">Maghrib <span class="faq-icon"><i class="fas fa-plus"></i></span></button><div class="faq-a">7:21</div></div>
+        <div class="faq-item reveal d4"><button class="faq-q" onclick="toggleFaq(this)">Isha <span class="faq-icon"><i class="fas fa-plus"></i></span></button><div class="faq-a">9:00</div></div>
+        <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">Jummah <span class="faq-icon"><i class="fas fa-plus"></i></span></button><div class="faq-a">1:30</div></div>
+      </div>
     </div>
   </section>
+ 
   <section id="events" class="events-section section">
     <div class="container">
       <div class="section-tag reveal">Countdown</div>
       <h2 class="section-title reveal">To Eid</h2>
       <div class="countdown-box reveal">
-        <div class="cd-unit"><div class="cd-num" id="cdD">4</div><div class="cd-lbl">Days</div></div>
+        <div class="cd-unit"><div class="cd-num" id="cdD">0</div><div class="cd-lbl">Days</div></div>
         <div class="cd-sep">:</div>
-        <div class="cd-unit"><div class="cd-num" id="cdH">11</div><div class="cd-lbl">Hours</div></div>
+        <div class="cd-unit"><div class="cd-num" id="cdH">0</div><div class="cd-lbl">Hours</div></div>
         <div class="cd-sep">:</div>
-        <div class="cd-unit"><div class="cd-num" id="cdM">58</div><div class="cd-lbl">Mins</div></div>
+        <div class="cd-unit"><div class="cd-num" id="cdM">0</div><div class="cd-lbl">Mins</div></div>
         <div class="cd-sep">:</div>
-        <div class="cd-unit"><div class="cd-num" id="cdS">44</div><div class="cd-lbl">Secs</div></div>
+        <div class="cd-unit"><div class="cd-num" id="cdS">0</div><div class="cd-lbl">Secs</div></div>
       </div>
       <div class="events-grid">
-   <div class="event-card reveal">
-  <div class="event-date-box">
-    <div class="day">20</div>
-    <div class="mon">MAR</div>
-  </div>
-
-  <div class="event-info">
-    <div class="event-name">Eid Prayer</div>
-    <div class="event-meta">
-      <span><i class="fas fa-clock"></i> 8:30 AM</span>
-      <span><i class="fas fa-map-pin"></i> ISPC</span>
-    </div>
-  </div>
-</div>
-</div>
-    
-      <script>
-const targetDate = new Date("Mar 2026 19:30:00").getTime();
-
-const countdown = setInterval(function () {
-
-  const now = new Date().getTime();
-  const distance = targetDate - now;
-
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("cdD").innerText = days;
-  document.getElementById("cdH").innerText = hours;
-  document.getElementById("cdM").innerText = minutes;
-  document.getElementById("cdS").innerText = seconds;
-
-  if (distance < 0) {
-    clearInterval(countdown);
-    document.getElementById("cdD").innerText = "0";
-    document.getElementById("cdH").innerText = "0";
-    document.getElementById("cdM").innerText = "0";
-    document.getElementById("cdS").innerText = "0";
-  }
-
-}, 1000);
-</script>
+        <div class="event-card reveal">
+          <div class="event-date-box">
+            <div class="day">20</div>
+            <div class="mon">MAR</div>
+          </div>
+          <div class="event-info">
+            <div class="event-name">Eid Prayer</div>
+            <div class="event-meta">
+              <span><i class="fas fa-clock"></i> 8:30 AM</span>
+              <span><i class="fas fa-map-pin"></i> ISPC</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+ 
   <section id="leadership" class="section">
     <div class="container">
       <div class="section-tag reveal">The Team</div>
@@ -404,17 +392,19 @@ const countdown = setInterval(function () {
       </div>
     </div>
   </section>
+ 
   <section id="testimonials" class="testimonials-section section">
     <div class="container">
       <div class="section-tag reveal">What Members Say</div>
       <h2 class="section-title reveal">Member Testimonials</h2>
       <div class="testi-grid">
-        <div class="testi-card reveal d1"><div class="testi-quote">"</div><p class="testi-text">“ISPC brings people together in a meaningful way. From prayers to community events, it’s a place where everyone feels welcome and included.”</p><div class="testi-author"><div class="testi-av">Z</div><div class="testi-info"><div class="tname">Zain Sadiq</div><div class="tgrade"></div></div></div></div>
-        <div class="testi-card reveal d2"><div class="testi-quote">"</div><p class="testi-text">“What makes ISPC special is the sense of unity. People genuinely support each other, and you can feel that connection at every gathering.”</p><div class="testi-author"><div class="testi-av">R</div><div class="testi-info"><div class="tname">Rabeel Sadiq</div><div class="tgrade"></div></div></div></div>
-        <div class="testi-card reveal d3"><div class="testi-quote">"</div><p class="testi-text">“No matter your background or age, ISPC creates an environment where you feel respected and comfortable being part of the community.”</p><div class="testi-author"><div class="testi-av">T</div><div class="testi-info"><div class="tname">Tayyab Sadiq</div><div class="tgrade"></div></div></div></div>
+        <div class="testi-card reveal d1"><div class="testi-quote">"</div><p class="testi-text">"ISPC brings people together in a meaningful way. From prayers to community events, it's a place where everyone feels welcome and included."</p><div class="testi-author"><div class="testi-av">Z</div><div class="testi-info"><div class="tname">Zain Sadiq</div><div class="tgrade"></div></div></div></div>
+        <div class="testi-card reveal d2"><div class="testi-quote">"</div><p class="testi-text">"What makes ISPC special is the sense of unity. People genuinely support each other, and you can feel that connection at every gathering."</p><div class="testi-author"><div class="testi-av">R</div><div class="testi-info"><div class="tname">Rabeel Sadiq</div><div class="tgrade"></div></div></div></div>
+        <div class="testi-card reveal d3"><div class="testi-quote">"</div><p class="testi-text">"No matter your background or age, ISPC creates an environment where you feel respected and comfortable being part of the community."</p><div class="testi-author"><div class="testi-av">T</div><div class="testi-info"><div class="tname">Tayyab Sadiq</div><div class="tgrade"></div></div></div></div>
       </div>
     </div>
   </section>
+ 
   <section id="gallery" class="section">
     <div class="container">
       <div class="section-tag reveal">Memories</div>
@@ -430,18 +420,21 @@ const countdown = setInterval(function () {
       </div>
     </div>
   </section>
+ 
   <section id="faq" class="section" style="background:var(--bg2)">
     <div class="container">
       <div class="section-tag reveal">Got Questions?</div>
       <h2 class="section-title reveal">FAQ</h2>
       <div class="faq-list">
         <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">Who can join? <span class="faq-icon"><i class="fas fa-plus"></i></span></button><div class="faq-a">Anyone can join! Regardless of race or background.</div></div>
-        <div class="faq-item reveal d1"><button class="faq-q" onclick="toggleFaq(this)">Where is the masjid located? <span class="faq-icon"><i class="fas fa-plus"></i></span></button><div class="faq-a">“616 Church Street, Roseville, CA95678</div></div>
+        <!-- FIX 10: Stray leading quote in address removed -->
+        <div class="faq-item reveal d1"><button class="faq-q" onclick="toggleFaq(this)">Where is the masjid located? <span class="faq-icon"><i class="fas fa-plus"></i></span></button><div class="faq-a">616 Church Street, Roseville, CA 95678</div></div>
         <div class="faq-item reveal d2"><button class="faq-q" onclick="toggleFaq(this)">Is there a membership fee? <span class="faq-icon"><i class="fas fa-plus"></i></span></button><div class="faq-a">No — completely free!</div></div>
         <div class="faq-item reveal d3"><button class="faq-q" onclick="toggleFaq(this)">How do I sign up? <span class="faq-icon"><i class="fas fa-plus"></i></span></button><div class="faq-a">Click "Join Us" to fill out the form, or come meet us in person.</div></div>
       </div>
     </div>
   </section>
+ 
   <section class="newsletter-section section">
     <div class="container">
       <div class="reveal" style="max-width:560px;margin:0 auto;text-align:center;">
@@ -456,23 +449,26 @@ const countdown = setInterval(function () {
       </div>
     </div>
   </section>
+ 
   <section id="join" class="join-section section">
     <div class="container">
       <div class="join-inner">
         <div class="section-tag">Ready?</div>
         <h2 class="section-title reveal">Join us today</h2>
-        <p class="section-sub reveal">Join our community today!!</p>
+        <p class="section-sub reveal">Join our community today!</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWuNJ-FyzqSCI4IxXI29o097OY_CkXHdvUA2C2QNCPmajHpg/viewform" target="_blank">
           <button class="btn-white reveal">Sign Up Now <i class="fas fa-arrow-right" style="margin-left:8px"></i></button>
         </a>
       </div>
     </div>
   </section>
+ 
   <footer>
     <div class="footer-grid">
       <div>
-        <div class="footer-brand">Islamic Society of Placer Couty</div>
-        <p class="footer-desc">Bringing Muslims toegether</p>
+        <!-- FIX 11: "Couty" → "County", "toegether" → "together" -->
+        <div class="footer-brand">Islamic Society of Placer County</div>
+        <p class="footer-desc">Bringing Muslims together</p>
         <div class="socials">
           <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
           <a href="#" class="social-btn"><i class="fab fa-facebook"></i></a>
@@ -482,44 +478,80 @@ const countdown = setInterval(function () {
       </div>
       <div class="footer-col"><h4>Navigate</h4><ul><li><a href="#about">About</a></li><li><a href="#goals">Goals</a></li><li><a href="#events">Events</a></li><li><a href="#faq">FAQ</a></li></ul></div>
       <div class="footer-col"><h4>Connect</h4><ul><li><a href="#">Instagram</a></li><li><a href="#">YouTube</a></li><li><a href="mailto:email@school.org">Email Us</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:email@school.org">email@school.org</a></li><li><a href="#">Your School</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:email@school.org">email@school.org</a></li><li><a href="#">ISPC</a></li></ul></div>
     </div>
     <div class="footer-bottom">
       <span>© 2025 Islamic Society of Placer County. All rights reserved.</span>
       <div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
     </div>
   </footer>
+ 
   <button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+ 
   <script>
+    // Particles
     const pc=document.getElementById('particles'),cols=['#2e565e','#adbbbe','#738589'],pts=[];
     for(let i=0;i<80;i++){const el=document.createElement('div'),s=Math.random()*5+2;Object.assign(el.style,{position:'absolute',borderRadius:'50%',width:s+'px',height:s+'px',background:cols[Math.floor(Math.random()*cols.length)],opacity:Math.random()*.5+.15,pointerEvents:'none'});pc.appendChild(el);pts.push({el,x:Math.random()*100,y:Math.random()*100,speed:Math.random()*1.5+.4,dir:Math.random()*360});}
     function animPts(){pts.forEach(p=>{let nx=p.x+Math.cos(p.dir*Math.PI/180)*p.speed*.08,ny=p.y+Math.sin(p.dir*Math.PI/180)*p.speed*.08;if(nx<=0||nx>=100){p.dir=180-p.dir;nx=Math.max(0,Math.min(100,nx));}if(ny<=0||ny>=100){p.dir=-p.dir;ny=Math.max(0,Math.min(100,ny));}p.x=nx;p.y=ny;p.el.style.left=p.x+'%';p.el.style.top=p.y+'%';});requestAnimationFrame(animPts);}
     animPts();
+ 
+    // Typing animation
     const L1='Welcome to',L2='ISPC';let i1=0,i2=0;
     const e1=document.getElementById('heroLine1'),e2=document.getElementById('heroLine2');
     function typeL1(){if(i1<L1.length){e1.textContent+=L1[i1++];setTimeout(typeL1,65);}else setTimeout(typeL2,220);}
     function typeL2(){if(i2<L2.length){e2.textContent+=L2[i2++];setTimeout(typeL2,85);}else{e2.classList.remove('typing');e2.classList.add('done');}}
     setTimeout(typeL1,500);
+ 
+    // Dark mode
     const darkBtn=document.getElementById('darkBtn');
     function toggleDark(){const h=document.documentElement,d=h.getAttribute('data-theme')==='dark';h.setAttribute('data-theme',d?'light':'dark');darkBtn.innerHTML=d?'<i class="fas fa-moon"></i>':'<i class="fas fa-sun"></i>';localStorage.setItem('theme',d?'light':'dark');}
     const saved=localStorage.getItem('theme');
     if(saved==='dark'){document.documentElement.setAttribute('data-theme','dark');darkBtn.innerHTML='<i class="fas fa-sun"></i>';}
+ 
+    // Scroll reveal
     const revEls=document.querySelectorAll('.reveal');
     const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:.15});
     revEls.forEach(el=>revObs.observe(el));
+ 
+    // Mobile nav
     const mNav=document.getElementById('mobileNav'),hbg=document.getElementById('hamburger');
     function toggleNav(){mNav.classList.toggle('open');hbg.classList.toggle('open');}
     function closeNav(){mNav.classList.remove('open');hbg.classList.remove('open');}
     window.addEventListener('scroll',()=>{if(mNav.classList.contains('open'))closeNav();});
+ 
+    // Sidebar
     const sb=document.getElementById('sidebar'),sbo=document.getElementById('sbOverlay');
     function toggleSb(){sb.classList.toggle('open');sbo.classList.toggle('show');}
     function closeSb(){sb.classList.remove('open');sbo.classList.remove('show');}
-    const eventDate=new Date('2025-04-15T15:30:00');
-    function updateCD(){const diff=eventDate-new Date();if(diff<=0)return;document.getElementById('cdD').textContent=String(Math.floor(diff/86400000)).padStart(2,'0');document.getElementById('cdH').textContent=String(Math.floor((diff%86400000)/3600000)).padStart(2,'0');document.getElementById('cdM').textContent=String(Math.floor((diff%3600000)/60000)).padStart(2,'0');document.getElementById('cdS').textContent=String(Math.floor((diff%60000)/1000)).padStart(2,'0');}
-    updateCD();setInterval(updateCD,1000);
+ 
+    // FIX 12: Countdown — single, correct implementation targeting Eid Prayer (Mar 20, 2026 8:30 AM)
+    // Removed the broken inline duplicate; fixed the invalid date string
+    const eventDate = new Date('March 20, 2026 08:30:00');
+    function updateCD(){
+      const diff = eventDate - new Date();
+      if(diff <= 0){
+        document.getElementById('cdD').textContent='0';
+        document.getElementById('cdH').textContent='0';
+        document.getElementById('cdM').textContent='0';
+        document.getElementById('cdS').textContent='0';
+        return;
+      }
+      document.getElementById('cdD').textContent=String(Math.floor(diff/86400000)).padStart(2,'0');
+      document.getElementById('cdH').textContent=String(Math.floor((diff%86400000)/3600000)).padStart(2,'0');
+      document.getElementById('cdM').textContent=String(Math.floor((diff%3600000)/60000)).padStart(2,'0');
+      document.getElementById('cdS').textContent=String(Math.floor((diff%60000)/1000)).padStart(2,'0');
+    }
+    updateCD();
+    setInterval(updateCD,1000);
+ 
+    // FAQ accordion
     function toggleFaq(btn){const item=btn.closest('.faq-item'),isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(el=>el.classList.remove('open'));if(!isOpen)item.classList.add('open');}
+ 
+    // Progress bar & back to top
     const pb=document.getElementById('progress-bar');
     window.addEventListener('scroll',()=>{pb.style.width=(window.scrollY/(document.body.scrollHeight-window.innerHeight)*100)+'%';document.getElementById('back-top').classList.toggle('show',window.scrollY>400);});
+ 
+    // Newsletter
     document.querySelector('.btn-nl').addEventListener('click',function(){const inp=document.querySelector('.nl-input');if(inp.value.includes('@')){inp.value='';this.textContent='Subscribed!';setTimeout(()=>this.textContent='Subscribe',3000);}else{inp.style.borderColor='#ef4444';setTimeout(()=>inp.style.borderColor='',2000);}});
   </script>
 </body>
